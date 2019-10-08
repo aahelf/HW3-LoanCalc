@@ -7,10 +7,6 @@ app = Flask(__name__)
 def index():
     return render_template('index.html', pageTitle='Loan Calculator')
 
-@app.route('/adam')
-def adam():
-    return "hello adam"
-
 if __name__ == '__main__':
     app.run(debug=True)
 
