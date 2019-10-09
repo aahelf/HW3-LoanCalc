@@ -3,6 +3,23 @@
 
 {% block body %}
 
-    <h2>This is a test</h2>
+    <form  method="post">
+  <table>
+    <tr>
+      <td> Loan Amount: </td> <td> <input type="text" name="A" /> </td>
+    </tr>
+    <tr>
+      <td> Payment Periods: </td> <td> <input type="text" name="n" /> </td>
+    </tr>
+    <tr>
+      <td> Periodic Interest Rate: </td> <td> <input type="text" name="i" /> </td>
+    </tr>
+  </table>
+    <br>
+  <input class="button" type="submit" formaction="/LoanPayment" value="LoanPayment" />
 
+</form>
+
+<p> {{ display }} </p>
+<div style="clear:both;"></div>
 {% endblock %}
