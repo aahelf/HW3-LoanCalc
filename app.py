@@ -15,7 +15,7 @@ def addition():
         n = float(form['n']) * 12
         i = float(form['i']) / 12
         dscnt = ( ( (1 + i) **n) - 1) / (i * (1 + i) **n)
-        borrowed = A/dscnt
+        borrowed = '${:,.2f}'.format((A/dscnt))
         return render_template('index.html', display=borrowed, pageTitle='My Calculator')
 
     return redirect("/")
